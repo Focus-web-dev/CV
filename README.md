@@ -1,1 +1,1 @@
-# CV
+# Curriculum vitae | Bogdan Nikitin
