@@ -318,26 +318,6 @@ h6 {
           animation: animate 7s linear infinite;
 }
 
-@-webkit-keyframes animate {
-  0%, 10%, 100% {
-    width: 0;
-  }
-
-  30%, 50%, 70%, 90% {
-    width: 100%;
-  }
-}
-
-@keyframes animate {
-  0%, 10%, 100% {
-    width: 0;
-  }
-
-  30%, 50%, 70%, 90% {
-    width: 100%;
-  }
-}
-
 .home-text h6 {
   font-weight: 500;
   text-align: center;
@@ -377,13 +357,15 @@ h6 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 100px;
+  margin-top: 75px;
 }
 
 .about-content {
   width: 100%;
-  height: 400px;
   background: #FFF;
+  padding: 50px;
+  -webkit-box-shadow: 0px 0px 15px 10px rgba(66, 66, 66, 0.2);
+          box-shadow: 0px 0px 15px 10px rgba(66, 66, 66, 0.2);
   position: relative;
 }
 
@@ -395,12 +377,43 @@ h6 {
 .about-text h2 {
   text-align: left;
   color: #424242;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.about-text h2 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(42, 42, 42, 0.5);
+}
+
+.about-text h2::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-right: 3px solid #424242;
+  width: 0%;
+  height: 100%;
+  color: #424242;
+  -webkit-text-stroke: 0px rgba(42, 42, 42, 0.5);
+  overflow: hidden;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-animation: animate 7s linear infinite;
+          animation: animate 7s linear infinite;
 }
 
 .about-text p {
   text-align: left;
   color: #424242;
+}
+
+.about-text p:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .about-img {
@@ -519,6 +532,26 @@ p {
   font-size: 20px;
   font-weight: 500;
   color: #424242;
+}
+
+@-webkit-keyframes animate {
+  0%, 10%, 100% {
+    width: 0;
+  }
+
+  30%, 50%, 70%, 90% {
+    width: 100%;
+  }
+}
+
+@keyframes animate {
+  0%, 10%, 100% {
+    width: 0;
+  }
+
+  30%, 50%, 70%, 90% {
+    width: 100%;
+  }
 }
 @supports (-webkit-appearance:none){
 .about-img{background-image:url(../img/about.webp)}

@@ -3,13 +3,16 @@
 .about {
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 75px;
 }
 
 .about-content {
     width: 100%;
-    height: 400px;
     background: $white;
+    
+    padding: 50px;
+
+    box-shadow: 0px 0px 15px 10px rgba(66, 66, 66, 0.2);
 
     position: relative;
 }
@@ -22,12 +25,45 @@
 .about-text h2 {
     text-align: left;
     color: $black;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.about-text h2 {
+    width:fit-content;
+    position: relative;
+    color: transparent;
+    -webkit-text-stroke: 1px $blackDarken;
+
+    &::before {
+        content: attr(data-text);
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        border-right: 3px solid $black;
+
+        width: 0%;
+        height: 100%;
+
+        color: $black;
+        -webkit-text-stroke: 0px $blackDarken;
+
+        overflow: hidden;
+
+        transition: 0.3s;
+
+        animation: animate 7s linear infinite;
+    }
 }
 
 .about-text p {
     text-align: left;
     color: $black;
+
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
 }
 
 .about-img  {
