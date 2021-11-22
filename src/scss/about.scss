@@ -1,0 +1,44 @@
+@import 'variables';
+
+.about {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.about-content {
+    width: 100%;
+    height: 400px;
+    background: $white;
+
+    position: relative;
+}
+
+.about-text {
+    width: 50%;
+    height: 100%;
+}
+
+.about-text h2 {
+    text-align: left;
+    color: $black;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    text-align: left;
+    color: $black;
+}
+
+.about-img  {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 50%;
+    height: 100%;
+
+    clip-path: polygon(20% 0, 100% 0%, 100% 100%, 0% 100%);
+    background-image: url(../img/about.jpg);
+    background-size: cover;
+}

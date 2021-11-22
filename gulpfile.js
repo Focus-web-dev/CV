@@ -1,4 +1,4 @@
-let project_folder = require("path").basename(__dirname);
+let project_folder = 'dist';
 let source_folder = "src";
 
 let path = {
@@ -14,14 +14,14 @@ let path = {
         html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
         css: source_folder + "/scss/style.scss",
         js: source_folder + "/js/script.js",
-        img: source_folder + "/img/**/*.{jpg, png, svg, gif, ico, webp}",
+        img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
     },
 
     watch: {
         html: source_folder + "/**/*.html",
         css: source_folder + "/scss/**/*.scss",
         js: source_folder + "/js/**/*.js",
-        img: source_folder + "/img/**/*.{jpg, png, svg, gif, ico, webp}",
+        img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
     },
 
     clean: "./" + project_folder + "/"
@@ -106,18 +106,18 @@ function js() {
 function images() {
     return src(path.src.img)
         .pipe(
-            webp({
-                quality: 70
-            })
-        )
-        .pipe(dest(path.build.img))
-        .pipe(src(path.src.img))
-        .pipe(
             imagemin({
                 progressive: true,
                 svgoPlugins: [{ removeViewVox: false }],
                 interlaced: true,
                 optimizationLevel: 3
+            })
+        )
+        .pipe(dest(path.build.img))
+        .pipe(src(path.src.img))
+        .pipe(
+            webp({
+                quality: 70
             })
         )
         .pipe(dest(path.build.img))
