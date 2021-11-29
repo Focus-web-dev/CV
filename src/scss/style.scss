@@ -7,6 +7,7 @@
 @import 'about';
 @import 'skills';
 @import 'portfolio';
+@import 'contact';
 
 html {
     scroll-behavior: smooth;
@@ -94,7 +95,7 @@ p {
         color: $black;
         font-weight: 500;
         letter-spacing: 2px;
-    } 
+    }
 }
 
 .filled {
