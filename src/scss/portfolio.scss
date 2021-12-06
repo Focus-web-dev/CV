@@ -6,6 +6,14 @@
     align-items: center;
 
     margin-top: 75px;
+
+    @media screen and (max-width: 1024px) {
+        margin-top: 50px;
+    }
+
+    @media screen and (max-width: 876px) {
+        margin-top: 35px;
+    }
 }
 
 .portfolio-content {
@@ -61,6 +69,14 @@
     justify-content: space-around;
 
     margin-top: 50px;
+
+    @media screen and (max-width: 1024px) {
+        margin-top: 25px;
+    }
+
+    @media screen and (max-width: 876px) {
+        margin-top: 20px;
+    }
 }
 
 .project {
@@ -84,6 +100,15 @@
         .project-hover {
             opacity: 1;
         }
+    }
+
+    @media screen and (max-width: 1024px) {
+        padding: 30px 20px;
+        box-shadow: 0px 0px 10px 10px rgba(66, 66, 66, 0.1);
+    }
+
+    @media screen and (max-width: 876px) {
+        max-width: 275px;
     }
 }
 
@@ -111,6 +136,10 @@
     color: $white;
     font-size: 32px;
     font-weight: 700;
+
+    @media screen and (max-width: 1024px) {
+        font-size: 26px;
+    }
 }
 
 .project h5 {
@@ -122,8 +151,16 @@
     color: $blackDarken;
     font-size: 18px;
     margin-bottom: 15px;
+
+    @media screen and (max-width: 1024px) {
+        font-size: 16px;
+    }
 }
 
 .project img {
     width: 90%;
+
+    @media screen and (max-width: 1024px) {
+        width: 75%;
+    }
 }

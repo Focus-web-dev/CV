@@ -149,6 +149,10 @@ h6 {
   }
 }
 
+.adaptive-menu {
+  display: none;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -169,6 +173,16 @@ h6 {
           align-items: center;
   padding: 25px;
   z-index: 100;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.adaptive-header {
+  width: 100vw !important;
+  height: 50vh !important;
+  border-bottom-left-radius: 25px !important;
+  border-bottom-right-radius: 25px;
 }
 
 .header-nav {
@@ -289,6 +303,8 @@ h6 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .home-text div h1 {
@@ -842,7 +858,7 @@ body {
 .container {
   max-width: 1280px;
   width: 100%;
-  padding: 0 10px;
+  padding: 0 20px;
 }
 
 h1,
@@ -956,6 +972,392 @@ p {
     width: 100%;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .header {
+    min-height: 60px;
+  }
+
+  .header-nav-el a {
+    font-size: 16px;
+  }
+
+  .home {
+    padding: 75px 0;
+    margin-top: 60px;
+  }
+
+  .home-text {
+    margin-bottom: 50px;
+  }
+
+  .home-text div {
+    margin-bottom: 15px;
+  }
+
+  .home-buttons .button {
+    width: 275px;
+    height: 60px;
+  }
+
+  .about {
+    margin-top: 50px;
+  }
+
+  .about-text h2 {
+    margin-bottom: 20px;
+  }
+
+  .skills {
+    margin-top: 50px;
+  }
+
+  .skills-list {
+    margin-top: 25px;
+  }
+
+  .skill {
+    min-width: 225px;
+  }
+
+  .skill-icon {
+    font-size: 62px;
+    margin-bottom: 15px;
+  }
+
+  .portfolio {
+    margin-top: 50px;
+  }
+
+  .projects-list {
+    margin-top: 25px;
+  }
+
+  .project {
+    padding: 30px 20px;
+    -webkit-box-shadow: 0px 0px 10px 10px rgba(66, 66, 66, 0.1);
+            box-shadow: 0px 0px 10px 10px rgba(66, 66, 66, 0.1);
+  }
+
+  .project-hover a {
+    font-size: 26px;
+  }
+
+  .project p.type {
+    font-size: 16px;
+  }
+
+  .project img {
+    width: 75%;
+  }
+
+  .contact {
+    margin-top: 50px;
+  }
+
+  .contact-buttons {
+    margin-top: 25px;
+  }
+
+  .contact-buttons a {
+    min-height: 60px;
+    padding: 10px 15px;
+    font-size: 18px;
+  }
+
+  .contact-buttons a i.bx {
+    font-size: 28px;
+    margin-right: 5px;
+  }
+
+  .container {
+    max-width: 1024px;
+  }
+
+  h1 {
+    font-size: 52px;
+    line-height: 75px;
+  }
+
+  h2 {
+    font-size: 42px;
+  }
+
+  h4 {
+    font-size: 32px;
+  }
+
+  h6 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .button {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 876px) {
+  .home-text {
+    margin-bottom: 35px;
+  }
+
+  .about-content {
+    -webkit-box-shadow: 0px 0px 10px 10px rgba(66, 66, 66, 0.1);
+            box-shadow: 0px 0px 10px 10px rgba(66, 66, 66, 0.1);
+  }
+
+  .about-content {
+    padding: 35px;
+  }
+
+  .about-text h2 {
+    margin-bottom: 15px;
+  }
+
+  .skills-list {
+    margin-top: 20px;
+  }
+
+  .skill {
+    padding: 15px 0;
+    margin: 15px;
+    min-width: 210px;
+  }
+
+  .skill-icon {
+    font-size: 56px;
+    margin-bottom: 15px;
+  }
+
+  .portfolio {
+    margin-top: 35px;
+  }
+
+  .projects-list {
+    margin-top: 20px;
+  }
+
+  .project {
+    max-width: 275px;
+  }
+
+  .contact {
+    margin-top: 35px;
+  }
+
+  .contact-buttons {
+    margin-top: 20px;
+  }
+
+  .contact-buttons a {
+    margin: 10px 15px;
+    min-height: 60px;
+    font-size: 16px;
+  }
+
+  .contact-buttons a i.bx {
+    font-size: 22px;
+    margin-right: 5px;
+  }
+
+  .container {
+    max-width: 876px;
+  }
+
+  h1 {
+    font-size: 42px;
+    line-height: 60px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h4 {
+    font-size: 26px;
+  }
+
+  h5 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .button {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 672px) {
+  .adaptive-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .adaptive-menu .bx-menu {
+    font-size: 32px;
+    color: #424242;
+  }
+
+  .header {
+    width: 75px;
+    height: 75px;
+    padding: 0;
+    left: unset;
+    right: 0;
+    border-bottom-left-radius: 50%;
+  }
+
+  .header-nav {
+    display: none;
+  }
+
+  .header-nav-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .home {
+    margin-top: 0;
+  }
+
+  .home-buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .home-buttons .button:first-child {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .about-content {
+    padding: 20px;
+    position: static;
+  }
+
+  .about-text {
+    width: 100%;
+    height: 50%;
+  }
+
+  .about-text p:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  .about-img {
+    -webkit-clip-path: none;
+            clip-path: none;
+    position: static;
+    top: unset;
+    right: unset;
+    width: 100%;
+    height: 250px;
+    margin-top: 25px;
+  }
+
+  .skill {
+    min-width: 150px;
+    margin: 10px;
+  }
+
+  .contact-buttons {
+    margin-top: 15px;
+  }
+
+  .contact-buttons a {
+    margin: 5px 10px;
+    min-height: 50px;
+    padding: 5px 15px;
+    font-size: 14px;
+  }
+
+  .container {
+    max-width: unset;
+    padding: 0 10px;
+  }
+
+  h1 {
+    font-size: 38px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h4 {
+    font-size: 22px;
+  }
+
+  h5 {
+    font-size: 18px;
+  }
+
+  h6 {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .button {
+    padding: 5px 15px;
+  }
+}
 @supports (-webkit-appearance:none){
 .about-img{background-image:url(../img/about.webp)}
+}
+
+ @media screen and (max-width: 1024px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media screen and (max-width: 876px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media screen and (max-width: 672px){
+
+@supports (-webkit-appearance:none){
+
+}
+
 }

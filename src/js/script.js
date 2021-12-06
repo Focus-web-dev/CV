@@ -51,5 +51,11 @@ if (animatedItems.length > 0) {
   }
 
   animationOnScroll()
-  console.log(animatedItems);
 }
+
+// Header toggle
+const burgerMenu = document.querySelector('.adaptive-menu');
+
+burgerMenu.addEventListener('click', () => {
+  document.querySelector('.header').classList.contains('adaptive-header') ? document.querySelector('.header').classList.remove('adaptive-header') : document.querySelector('header').classList.add('adaptive-header');
+})

@@ -6,6 +6,10 @@
     align-items: center;
 
     margin-top: 75px;
+
+    @media screen and (max-width: 1024px) {
+        margin-top: 50px;
+    }
 }
 
 .skills-content {
@@ -61,6 +65,14 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+
+    @media screen and (max-width: 1024px) {
+        margin-top: 25px;
+    }
+
+    @media screen and (max-width: 876px) {
+        margin-top: 20px;
+    }
 }
 
 .skill {
@@ -78,6 +90,21 @@
     &:hover {
         box-shadow: 0px 0px 15px 10px rgba(66, 66, 66, 0.1);
     }
+
+    @media screen and (max-width: 1024px) {
+        min-width: 225px;
+    }
+
+    @media screen and (max-width: 876px) {
+        padding: 15px 0;
+        margin: 15px;
+        min-width: 210px;
+    }
+
+    @media screen and (max-width: 672px) {
+        min-width: 150px;
+        margin: 10px;
+    }
 }
 
 .skill-icon {
@@ -85,6 +112,16 @@
     font-size: 72px;
     text-align: center;
     margin-bottom: 20px;
+
+    @media screen and (max-width: 1024px) {
+        font-size: 62px;
+        margin-bottom: 15px;
+    }
+
+    @media screen and (max-width: 876px) {
+        font-size: 56px;
+        margin-bottom: 15px;
+    }
 }
 
 .skill h4 {
