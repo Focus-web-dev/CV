@@ -153,6 +153,16 @@ h6 {
   display: none;
 }
 
+.adaptive-menu-active {
+  display: none;
+}
+
+.visually-hidden {
+  display: none;
+  opacity: 0;
+  z-index: -99;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -173,14 +183,14 @@ h6 {
           align-items: center;
   padding: 25px;
   z-index: 100;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: width 0.3s, height 0.3s;
+  -o-transition: width 0.3s, height 0.3s;
+  transition: width 0.3s, height 0.3s;
 }
 
 .adaptive-header {
   width: 100vw !important;
-  height: 50vh !important;
+  height: 40vh !important;
   border-bottom-left-radius: 25px !important;
   border-bottom-right-radius: 25px;
 }
@@ -1198,19 +1208,32 @@ p {
 
 @media screen and (max-width: 672px) {
   .adaptive-menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    display: unset;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    -webkit-transform: translate(50%, -50%);
+        -ms-transform: translate(50%, -50%);
+            transform: translate(50%, -50%);
   }
 
   .adaptive-menu .bx-menu {
     font-size: 32px;
+    color: #424242;
+  }
+
+  .adaptive-menu-active {
+    display: unset;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+
+  .adaptive-menu-active .bx-plus {
+    font-size: 42px;
     color: #424242;
   }
 
@@ -1238,6 +1261,11 @@ p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+
+  .header-nav-el:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 20px;
   }
 
   .home {

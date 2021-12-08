@@ -54,8 +54,23 @@ if (animatedItems.length > 0) {
 }
 
 // Header toggle
-const burgerMenu = document.querySelector('.adaptive-menu');
+const openMenu = document.querySelector('.adaptive-menu');
+const closeMenu = document.querySelector('.adaptive-menu-active');
 
-burgerMenu.addEventListener('click', () => {
-  document.querySelector('.header').classList.contains('adaptive-header') ? document.querySelector('.header').classList.remove('adaptive-header') : document.querySelector('header').classList.add('adaptive-header');
+openMenu.addEventListener('click', () => {
+  document.querySelector('.adaptive-menu').classList.add('visually-hidden');
+  document.querySelector('.adaptive-menu-active').classList.remove('visually-hidden');
+
+  document.querySelector('.header-nav').style.display = `flex`;
+  document.querySelector('.header').classList.add('adaptive-header');
+})
+
+closeMenu.addEventListener('click', () => {
+  document.querySelector('.adaptive-menu-active').classList.add('visually-hidden');
+  setTimeout(() => {
+    document.querySelector('.adaptive-menu').classList.remove('visually-hidden');
+  }, 300)
+
+  document.querySelector('.header-nav').style.display = `none`;
+  document.querySelector('.header').classList.remove('adaptive-header');
 })
