@@ -42,7 +42,10 @@ let { src, dest} = require('gulp'),
     webp = require('gulp-webp'),
     webphtml = require('gulp-webp-html'),
     webpcss = require('gulp-webp-css'),
-    svgSprite = require('gulp-svg-sprite');
+    svgSprite = require('gulp-svg-sprite'),
+    ghPages = require('gh-pages'),
+    pathDep = require('path');
+    // ghPages = require('gulp-gh-pages');
 
 function browserSync(params) {
     browsersync.init({
@@ -124,6 +127,10 @@ function images() {
         .pipe(browsersync.stream())
 }
 
+function deploy(cb) {
+    ghPages.publish(pathDep.join(process.cwd(), './dist'), cb);
+  }
+
 // Запускать отдельно через "gulp <task-name>"
 
 gulp.task('svgSprite', function() {
@@ -141,6 +148,11 @@ gulp.task('svgSprite', function() {
         .pipe(dest(path.build.img))
 })
 
+// gulp.task('deploy', function() {
+//     return gulp.src('./dist/**/*')
+//         .pipe(ghPages());
+// });
+
 function watchFiles() {
     gulp.watch([path.watch.html], html);
     gulp.watch([path.watch.css], css);
@@ -155,6 +167,7 @@ function clean() {
 let build = gulp.series(clean, gulp.parallel(js, css, html, images));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
+exports.deploy = deploy;
 exports.images = images;
 exports.js = js;
 exports.css = css;
