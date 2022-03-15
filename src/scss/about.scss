@@ -63,7 +63,7 @@
     width:fit-content;
     position: relative;
     color: transparent;
-    -webkit-text-stroke: 1px $blackDarken;
+    -webkit-text-stroke: 1px $whiteDarken;
 
     &::before {
         content: attr(data-text);

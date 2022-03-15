@@ -252,6 +252,7 @@ h6 {
 }
 
 .home {
+  position: relative;
   margin-top: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -266,6 +267,19 @@ h6 {
   padding: 100px 0;
   background: -o-linear-gradient(349.51deg, #77359e -33.32%, #0b6c8f 111.53%);
   background: linear-gradient(100.49deg, #77359e -33.32%, #0b6c8f 111.53%);
+}
+
+.particles-js-canvas-el {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
 }
 
 .home-content {
@@ -412,7 +426,7 @@ h6 {
   width: fit-content;
   position: relative;
   color: transparent;
-  -webkit-text-stroke: 1px rgba(42, 42, 42, 0.5);
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
 }
 
 .about-text h2::before {
@@ -1364,6 +1378,7 @@ p {
   }
 }
 @supports (-webkit-appearance:none){
+.particles-js-canvas-el{background-image:url("")}
 .about-img{background-image:url(../img/about.webp)}
 }
 
