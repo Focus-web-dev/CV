@@ -264,8 +264,8 @@ h6 {
           align-items: center;
   width: 100%;
   padding: 100px 0;
-  background: -o-linear-gradient(349.51deg, #2D615A -33.32%, #0D0C36 111.53%);
-  background: linear-gradient(100.49deg, #2D615A -33.32%, #0D0C36 111.53%);
+  background: -o-linear-gradient(349.51deg, #77359e -33.32%, #0b6c8f 111.53%);
+  background: linear-gradient(100.49deg, #77359e -33.32%, #0b6c8f 111.53%);
 }
 
 .home-content {
@@ -557,8 +557,9 @@ h6 {
 }
 
 .skill:hover {
-  -webkit-box-shadow: 0px 0px 15px 10px rgba(66, 66, 66, 0.1);
-          box-shadow: 0px 0px 15px 10px rgba(66, 66, 66, 0.1);
+  -webkit-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+          transform: translateY(-5px);
 }
 
 .skill-icon {
@@ -706,7 +707,7 @@ h6 {
           backdrop-filter: blur(1px);
 }
 
-.project-hover a {
+.project-hover p {
   color: #FFF;
   font-size: 32px;
   font-weight: 700;
@@ -1049,7 +1050,7 @@ p {
             box-shadow: 0px 0px 10px 10px rgba(66, 66, 66, 0.1);
   }
 
-  .project-hover a {
+  .project-hover p {
     font-size: 26px;
   }
 
