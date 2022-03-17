@@ -159,3 +159,15 @@ else {
     }, 300);
   });
 }
+
+// SLICK SLIDER
+
+$('.portfolio-items').slick({
+  infinite: true,
+  slidesToShow: 1,
+  dots: true,
+  adaptiveHeight: true,
+  lazyLoad: 'progressive',
+  fade: false,
+  speed: 1000,
+});
